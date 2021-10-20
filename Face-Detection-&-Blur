@@ -1,0 +1,9 @@
+img = imread('p2.jpg');
+faceD = vision.CascadeObjectDetector('MergeThreshold', 7);
+bbox=step(faceD, img);
+blur=fspecial('disk', 7);
+for j = 1:size(bbox,1)
+    crop = imcrop(img, bbox(i,:));
+    crop = imfilter(crop,blur);
+    img(bbox(i,2):bbox(i,2)+bbox(i,4),bbox(i,1):bbox(i,1)+bbox(i,3),:)=crop;
+end
