@@ -1,4 +1,4 @@
-# BLUR ALL IMAGES OF DIRECTORY IMAGES
+# BLUR ALL IMAGES OF DIRECTORY
 
 directory = dir('C:\Users\Lenovo\Pictures\Saved Pictures\JAMIL AHMED\*.jpg');
 for k = 1 : size(directory,1)
